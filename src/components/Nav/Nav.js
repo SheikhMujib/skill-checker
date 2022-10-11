@@ -4,9 +4,9 @@ import { NavLink } from "react-router-dom";
 const Nav = () => {
   return (
     <div className="container">
-      <nav className="navbar navbar-expand-lg bg-light">
+      <nav className="navbar navbar-expand-md bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <a className="navbar-brand fs-3 fw-bold" href="/">
             Skill Checker
           </a>
           <button
@@ -21,12 +21,12 @@ const Nav = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 fs-5 fw-semibold">
               <li className="nav-item">
                 <NavLink
                   to="/home"
                   className={({ isActive }) =>
-                    isActive ? "bg-primary nav-link" : "nav-link"
+                    isActive ? "bg-primary nav-link text-white px-3" : "nav-link"
                   }
                 >
                   Home
@@ -34,9 +34,19 @@ const Nav = () => {
               </li>
               <li className="nav-item">
                 <NavLink
+                  to="/topics"
+                  className={({ isActive }) =>
+                    isActive ? "bg-primary nav-link text-white px-3" : "nav-link"
+                  }
+                >
+                  Topics
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
                   to="statistics"
                   className={({ isActive }) =>
-                    isActive ? "bg-primary nav-link" : "nav-link"
+                    isActive ? "bg-primary nav-link text-white px-3" : "nav-link"
                   }
                 >
                   Statistics
@@ -46,7 +56,7 @@ const Nav = () => {
                 <NavLink
                   to="/blog"
                   className={({ isActive }) =>
-                    isActive ? "bg-primary nav-link" : "nav-link"
+                    isActive ? "bg-primary nav-link text-white px-3" : "nav-link"
                   }
                 >
                   Blog

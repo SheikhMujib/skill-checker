@@ -3,6 +3,7 @@ import "./App.css";
 import Blog from "./components/Blog/Blog";
 import Home from "./components/Home/Home";
 import Statistics from "./components/Statistics/Statistics";
+import Topics from "./components/Topics/Topics";
 import Main from "./layouts/Main";
 
 function App() {
@@ -12,8 +13,16 @@ function App() {
       element: <Main></Main>,
       children: [
         {
-          path: "home",
+          path: "/",
           element: <Home></Home>,
+        },
+        {
+          path: "/home",
+          element: <Home></Home>,
+        },
+        {
+          path: "topics",
+          element: <Topics></Topics>,
         },
         {
           path: "statistics",
