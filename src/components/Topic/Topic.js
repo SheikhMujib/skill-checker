@@ -1,15 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Topic = ({ topic }) => {
-  const { name, logo, total } = topic;
+  const { id, name, logo, total } = topic;
   return (
     <div className="col">
       <div className="card h-100">
-        <img
-          className="img-fluid bg-dark card-img-top"
-          src={logo}
-          alt="..."
-        />
+        <img className="img-fluid bg-dark card-img-top" src={logo} alt="..." />
         <div className="row p-2">
           <div className="col">
             <h5>{name}</h5>
@@ -18,9 +15,9 @@ const Topic = ({ topic }) => {
             <h5>Questions: {total}</h5>
           </div>
           <div className="col">
-            <a href="a" className="btn btn-primary">
+            <Link to={`/quizzes/${id}`} className="btn btn-primary">
               Start Quiz
-            </a>
+            </Link>
           </div>
         </div>
       </div>
