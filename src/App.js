@@ -1,4 +1,8 @@
-import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Link,
+  RouterProvider,
+} from "react-router-dom";
 import "./App.css";
 import Blog from "./components/Blog/Blog";
 import Home from "./components/Home/Home";
@@ -14,14 +18,23 @@ function App() {
       children: [
         {
           path: "/",
+          loader: async () => {
+            return fetch("https://openapi.programming-hero.com/api/quiz");
+          },
           element: <Home></Home>,
         },
         {
           path: "/home",
+          loader: async () => {
+            return fetch("https://openapi.programming-hero.com/api/quiz");
+          },
           element: <Home></Home>,
         },
         {
           path: "topics",
+          loader: async () => {
+            return fetch("https://openapi.programming-hero.com/api/quiz");
+          },
           element: <Topics></Topics>,
         },
         {
@@ -39,8 +52,8 @@ function App() {
       element: (
         <div className="container">
           <h1>Oops!</h1>
-          <p>Sorry, an unexpected error has occurred.</p>
-          <p>You may visit our home page by clicking the following link...</p>
+          <h3>Sorry, an unexpected error has occurred.</h3>
+          <h3>You may visit our home page by clicking the following link...</h3>
           <Link to="/home" className="nav-link fs-1">
             Home
           </Link>
@@ -48,6 +61,7 @@ function App() {
       ),
     },
   ]);
+
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
