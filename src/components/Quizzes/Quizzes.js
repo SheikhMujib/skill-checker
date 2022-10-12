@@ -10,7 +10,7 @@ const Quizzes = () => {
     console.log(quizzes);
 
   return (
-    <div>
+    <div className="container">
       <h2>Quiz of {quizzes.name}</h2>
       {questions.map((question, index) => (
         <Question key={question.id} question={question} index={index}></Question>
