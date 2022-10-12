@@ -6,9 +6,7 @@ const Quizzes = () => {
   const quizzesObject = useLoaderData();
   const quizzes = quizzesObject.data;
   const questions = quizzes.questions;
-  // const options = questions[0].options;
-  // console.log(quizzes);
-  // console.log(options);
+  
 
   return (
     <div className="container">

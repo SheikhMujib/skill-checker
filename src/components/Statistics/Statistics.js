@@ -6,22 +6,16 @@ const Statistics = () => {
   const [quizzes, setQuizzes] = useState([]);
 
   useEffect(() => {
-    // fetch('https://openapi.programming-hero.com/api/phones?search=iphone')
-    // .then(res => res.json())
-    // .then(data => {})
-
     axios.get("https://openapi.programming-hero.com/api/quiz").then((data) => {
       const quizzesLoaded = data.data.data;
       const quizzesData = quizzesLoaded.map((quiz) => {
-        // const parts = phone.slug.split('-');
-        // const price = parseInt(parts[1]);
         const singleQuiz = {
           name: quiz.name,
           total: quiz.total,
         };
         return singleQuiz;
       });
-      console.log(quizzesData);
+
       setQuizzes(quizzesData);
     });
   }, []);

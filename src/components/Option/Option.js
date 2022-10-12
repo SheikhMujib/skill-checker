@@ -1,6 +1,8 @@
 import React from "react";
 
 const Option = ({ option }) => {
+console.log(option)
+
   return (
     <div>
       <li className="list-group-item p-2 border">
