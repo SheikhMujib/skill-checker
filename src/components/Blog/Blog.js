@@ -4,7 +4,7 @@ const Blog = () => {
   return (
     <div className="container text-center">
       <div className="row row-cols-1 my-5">
-        <div className="col">
+        <div className="col my-4">
           <h3>Questions and Answers</h3>
         </div>
         <div className="col">
@@ -24,7 +24,15 @@ const Blog = () => {
             mainly used for developing single page web applications.
           </p>
         </div>
-        <div className="col">Column</div>
+        <div className="col">
+          <h5>Question-2: How does Context API work?</h5>
+          <p>
+          The React Context API is a way for a React app to effectively produce global variables that can be passed around. This is the alternative to "prop drilling" or moving props from grandparent to child to parent, and so on. Context API is a (kind of) new feature added in version 16.3 of React that allows one to share state across the entire app (or part of it) lightly and with ease.
+          </p>
+          <p>
+          React.createContext() is all we need. It returns a consumer and a provider. Provider is a component that as it's names suggests provides the state to its children. It will hold the "store" and be the parent of all the components that might need that store. Consumer as it so happens is a component that consumes and uses the state.
+          </p>
+        </div>
         <div className="col">Column</div>
       </div>
     </div>
