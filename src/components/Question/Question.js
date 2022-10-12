@@ -6,12 +6,20 @@ const Question = ({ question, index }) => {
   console.log(options);
   return (
     <div className="container">
-      <h3>
-        {index + 1}. {question.question.slice(3, -4)}
-      </h3>
-      {options.map((option, idx) => (
-        <Option key={idx} option={option}></Option>
-      ))}
+      <div className="col mb-5">
+        <div className="card h-100 bg-light">
+          <div className="card-body">
+            <h5 className="card-title">
+              {index + 1}. {question.question.slice(3, -4)}
+            </h5>
+            <ul>
+              {options.map((option, idx) => (
+                <Option key={idx} option={option}></Option>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

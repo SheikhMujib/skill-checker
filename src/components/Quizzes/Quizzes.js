@@ -7,15 +7,21 @@ const Quizzes = () => {
   const quizzes = quizzesObject.data;
   const questions = quizzes.questions;
   // const options = questions[0].options;
-    // console.log(quizzes);
-    // console.log(options);
+  // console.log(quizzes);
+  // console.log(options);
 
   return (
     <div className="container">
-      <h2>Quiz of {quizzes.name}</h2>
-      {questions.map((question, index) => (
-        <Question key={question.id} question={question} index={index}></Question>
-      ))}
+      <h2 className="mb-5">Quiz of {quizzes.name}</h2>
+      <div className="row row-cols-1 g-4">
+        {questions.map((question, index) => (
+          <Question
+            key={question.id}
+            question={question}
+            index={index}
+          ></Question>
+        ))}
+      </div>
     </div>
   );
 };
